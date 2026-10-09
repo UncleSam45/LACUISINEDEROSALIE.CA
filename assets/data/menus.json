@@ -1,20 +1,20 @@
 {
   "current_menu": {
-    "id": "menu-2026-09-18",
+    "id": "menu-2026-10-09",
     "active": true,
-    "title": "Menu actuel",
+    "title": "Nouveau menu",
     "description": "Plats maison en formats Petit, Grand et Famille, avec soupes, salades, collations et sous-marins. Commandez au moins 72 heures à l’avance.",
-    "start_date": "2026-09-18",
-    "end_date": "2026-09-23",
+    "start_date": "",
+    "end_date": "",
     "item_ids": [
-      "item_468892b0916d4638b8cf2993c6fea18d",
-      "item_fdba48d9c39b4be69c26ef08a5d33924",
-      "item_ddaf0e77fa53401e90cc4432cff9c7d9",
-      "item_ac29162c18f2482b8fcff69504ef2a63",
-      "item_6bf43b46dc354808be3f69402a4d447c"
+      "macaroni-chinois-au-poulet_20261009",
+      "lasagne-3-fromages_20261009",
+      "penne-rosee-champignons-vin-blanc_20261009",
+      "pain-de-viande-sauce-brune-patates-cubes_20261009",
+      "poulet-marine-riz-brocoli_20261009"
     ],
     "extra_ids": [
-      "item_7d27d02862424ba0b656fe76c2e06491",
+      "soupe-nouilles-legumes_20261009",
       "item_1617137d62854ce9b53a134686ead93a",
       "item_90077e98ba654f6cb5c179654b809a36",
       "item_4b81f71321024e5297ad6629ad8780c5",
@@ -25,6 +25,31 @@
     "promotion_ids": []
   },
   "archive": [
+    {
+      "id": "menu-2026-09-18",
+      "active": true,
+      "title": "Menu actuel",
+      "description": "Plats maison en formats Petit, Grand et Famille, avec soupes, salades, collations et sous-marins. Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-09-18",
+      "end_date": "2026-09-23",
+      "item_ids": [
+        "item_468892b0916d4638b8cf2993c6fea18d",
+        "item_fdba48d9c39b4be69c26ef08a5d33924",
+        "item_ddaf0e77fa53401e90cc4432cff9c7d9",
+        "item_ac29162c18f2482b8fcff69504ef2a63",
+        "item_6bf43b46dc354808be3f69402a4d447c"
+      ],
+      "extra_ids": [
+        "item_7d27d02862424ba0b656fe76c2e06491",
+        "item_1617137d62854ce9b53a134686ead93a",
+        "item_90077e98ba654f6cb5c179654b809a36",
+        "item_4b81f71321024e5297ad6629ad8780c5",
+        "item_4ed77a1e778f414abf91359498e8b6c2",
+        "item_78b258e1b7434da4b42bc9d116b39954",
+        "item_b37fd020341443f0832ea0e4cd3e6d5d"
+      ],
+      "promotion_ids": []
+    },
     {
       "id": "menu-2026-08-28",
       "active": true,

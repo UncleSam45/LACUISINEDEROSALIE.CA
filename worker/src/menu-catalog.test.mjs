@@ -11,16 +11,16 @@ const [itemsData, menus, settings, delivery, stripe] = await Promise.all([
 ]);
 
 const expected = new Map([
-  ['Penne alfredo au poulet', { petit: 8, grand: 12, familial: 23 }],
-  ['Boulettes asiatiques avec riz aux légumes', { petit: 8, grand: 12, familial: 23 }],
-  ['Lasagne pepperoni fromage', { petit: 8, grand: 12, familial: 23 }],
-  ['Chaudron de saucisses, patates et légumes', { petit: 8, grand: 12, familial: 23 }],
-  ['Porc miel et ail, riz et brocoli', { petit: 8, grand: 12, familial: 23 }],
-  ['Soupe aux légumes', { standard: 4 }],
+  ['Macaroni chinois au poulet', { petit: 8, grand: 12, familial: 23 }],
+  ['Lasagne 3 fromages', { petit: 8, grand: 12, familial: 23 }],
+  ['Penne rosée champignons et vin blanc', { petit: 8, grand: 12, familial: 23 }],
+  ['Pain de viande sauce brune avec patates cubes', { petit: 8, grand: 12, familial: 23 }],
+  ['Poulet mariné, riz et brocoli', { petit: 8, grand: 12, familial: 23 }],
+  ['Soupe nouilles et légumes', { standard: 4 }],
   ['Salade du chef', { standard: 5 }],
   ['Salade grecque', { standard: 5 }],
   ['Collation céleri et carottes, trempette maison', { standard: 5 }],
-  ['Collation yogourt grec et bleuets', { standard: 5 }],
+  ['Collation yogourt et bleuets', { standard: 5 }],
   ['Sous-marins viande froide', { standard: 7 }],
   ['Sous-marins pizza', { standard: 7 }],
 ]);

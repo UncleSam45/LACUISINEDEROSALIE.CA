@@ -11,14 +11,14 @@
     "menus_json": "assets/data/menus.json"
   },
   "menu": {
-    "id": "menu-2026-09-18",
-    "title": "Menu actuel",
-    "start_date": "2026-09-18",
-    "end_date": "2026-09-23"
+    "id": "menu-2026-10-09",
+    "title": "Nouveau menu",
+    "start_date": "",
+    "end_date": ""
   },
   "items": {
-    "item_26307a652827476980354316c080cd0b": {
-      "title": "Penne alfredo au poulet",
+    "macaroni-chinois-au-poulet_20261009": {
+      "title": "Macaroni chinois au poulet",
       "category": "Les plats",
       "product_id": "",
       "active": true,
@@ -43,8 +43,8 @@
         }
       }
     },
-    "item_8f00ff58b47f4fafb5686030089d0a3f": {
-      "title": "Boulettes asiatiques avec riz aux légumes",
+    "lasagne-3-fromages_20261009": {
+      "title": "Lasagne 3 fromages",
       "category": "Les plats",
       "product_id": "",
       "active": true,
@@ -69,8 +69,8 @@
         }
       }
     },
-    "item_4570c42189c642e6968759d6757c8a61": {
-      "title": "Lasagne pepperoni fromage",
+    "penne-rosee-champignons-vin-blanc_20261009": {
+      "title": "Penne rosée champignons et vin blanc",
       "category": "Les plats",
       "product_id": "",
       "active": true,
@@ -95,8 +95,8 @@
         }
       }
     },
-    "item_c7297097395c46829ef6ad53fe1e764f": {
-      "title": "Chaudron de saucisses, patates et légumes",
+    "pain-de-viande-sauce-brune-patates-cubes_20261009": {
+      "title": "Pain de viande sauce brune avec patates cubes",
       "category": "Les plats",
       "product_id": "",
       "active": true,
@@ -121,8 +121,8 @@
         }
       }
     },
-    "item_23a1fbe8db3c4da58e405faad9698986": {
-      "title": "Porc miel et ail, riz et brocoli",
+    "poulet-marine-riz-brocoli_20261009": {
+      "title": "Poulet mariné, riz et brocoli",
       "category": "Les plats",
       "product_id": "",
       "active": true,
@@ -147,8 +147,8 @@
         }
       }
     },
-    "item_b7a6f709ed924c83834f1289fd883f11": {
-      "title": "Soupe aux légumes",
+    "soupe-nouilles-legumes_20261009": {
+      "title": "Soupe nouilles et légumes",
       "category": "Les soupes",
       "product_id": "",
       "active": true,
@@ -161,7 +161,7 @@
         }
       }
     },
-    "item_80b3401cebcd4995b1f5930d6ffbc295": {
+    "item_1617137d62854ce9b53a134686ead93a": {
       "title": "Salade du chef",
       "category": "Les salades",
       "product_id": "",
@@ -175,7 +175,7 @@
         }
       }
     },
-    "item_7e75b8a217584d5f8e023e25ccb5a6c2": {
+    "item_90077e98ba654f6cb5c179654b809a36": {
       "title": "Salade grecque",
       "category": "Les salades",
       "product_id": "",
@@ -189,7 +189,7 @@
         }
       }
     },
-    "item_63f0ee3ff25b4527a1b84979068dc20f": {
+    "item_4b81f71321024e5297ad6629ad8780c5": {
       "title": "Collation céleri et carottes, trempette maison",
       "category": "Collations",
       "product_id": "",
@@ -203,8 +203,8 @@
         }
       }
     },
-    "item_37c8871cecd7410c803011694297d1eb": {
-      "title": "Collation yogourt grec et bleuets",
+    "item_4ed77a1e778f414abf91359498e8b6c2": {
+      "title": "Collation yogourt et bleuets",
       "category": "Collations",
       "product_id": "",
       "active": true,
@@ -217,7 +217,7 @@
         }
       }
     },
-    "item_d1083d37c9c94f3195fbaf054d337334": {
+    "item_78b258e1b7434da4b42bc9d116b39954": {
       "title": "Sous-marins viande froide",
       "category": "Les sous-marins",
       "product_id": "",
@@ -231,7 +231,7 @@
         }
       }
     },
-    "item_f7f1e87d186c4974ae48550eae09f334": {
+    "item_b37fd020341443f0832ea0e4cd3e6d5d": {
       "title": "Sous-marins pizza",
       "category": "Les sous-marins",
       "product_id": "",
