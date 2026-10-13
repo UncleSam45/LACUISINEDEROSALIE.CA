@@ -3,7 +3,13 @@
   "projectId": 1243261301,
   "toolkitId": 1329917266,
   "toolkit": "UncleSam45/CROWDNET_RESTAURATION_TOOLKIT",
-  "watermark": null,
+  "watermark": {
+    "toolkit": "UncleSam45/CROWDNET_RESTAURATION_TOOLKIT",
+    "toolkitVersion": "ROYAL BEAR v24.0.0",
+    "toolkitHeadSha": "f2edadf6e0c4f9d09a9d4f7adb9322144fdbb339",
+    "synchronizedAt": "2026-10-13T00:58:21.027Z",
+    "source": "manual"
+  },
   "comparison": {
     "status": "update",
     "missing": 6,
@@ -14,6 +20,6 @@
     "applicationHeadSha": "f63e2e5a1edd222f7f4187730570cdb666cc2202",
     "checkedAt": "2026-10-13T00:58:06.647Z"
   },
-  "updatedAt": "2026-10-13T00:58:09.192Z",
+  "updatedAt": "2026-10-13T00:58:23.479Z",
   "updatedBy": "sam"
 }
