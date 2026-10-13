@@ -4,7 +4,16 @@
   "toolkitId": 1329917266,
   "toolkit": "UncleSam45/CROWDNET_RESTAURATION_TOOLKIT",
   "watermark": null,
-  "comparison": null,
-  "updatedAt": "2026-10-13T00:56:45.285Z",
+  "comparison": {
+    "status": "update",
+    "missing": 6,
+    "older": 83,
+    "incomplete": 0,
+    "toolkitHeadSha": "f2edadf6e0c4f9d09a9d4f7adb9322144fdbb339",
+    "toolkitVersion": "ROYAL BEAR v24.0.0",
+    "applicationHeadSha": "116708084b476d55ac46e1daddde465fa68b1345",
+    "checkedAt": "2026-10-13T00:57:25.327Z"
+  },
+  "updatedAt": "2026-10-13T00:57:27.728Z",
   "updatedBy": "sam"
 }
