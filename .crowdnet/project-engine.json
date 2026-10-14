@@ -16,10 +16,10 @@
     "older": 83,
     "incomplete": 0,
     "toolkitHeadSha": "f2edadf6e0c4f9d09a9d4f7adb9322144fdbb339",
-    "toolkitVersion": "ROYAL BEAR v24.0.0",
-    "applicationHeadSha": "f63e2e5a1edd222f7f4187730570cdb666cc2202",
-    "checkedAt": "2026-10-13T00:58:06.647Z"
+    "toolkitVersion": "ARCTIC DRAGONFLY v24.0.0",
+    "applicationHeadSha": "d35855639a128bba798136224acd9819c352cc37",
+    "checkedAt": "2026-10-14T22:12:44.631Z"
   },
-  "updatedAt": "2026-10-13T00:58:23.479Z",
+  "updatedAt": "2026-10-14T22:12:47.112Z",
   "updatedBy": "sam"
 }
