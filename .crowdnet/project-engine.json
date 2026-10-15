@@ -2,9 +2,9 @@
   "schema": 1,
   "projectId": 1243261301,
   "toolkitId": 1329917266,
-  "toolkit": "UncleSam45/CROWDNET_RESTAURATION_TOOLKIT",
+  "toolkit": "UncleSam45/RESTAURATION.VAISICA.ORG",
   "watermark": {
-    "toolkit": "UncleSam45/CROWDNET_RESTAURATION_TOOLKIT",
+    "toolkit": "UncleSam45/RESTAURATION.VAISICA.ORG",
     "toolkitVersion": "ROYAL BEAR v24.0.0",
     "toolkitHeadSha": "f2edadf6e0c4f9d09a9d4f7adb9322144fdbb339",
     "synchronizedAt": "2026-10-13T00:58:21.027Z",
@@ -17,9 +17,9 @@
     "incomplete": 0,
     "toolkitHeadSha": "f2edadf6e0c4f9d09a9d4f7adb9322144fdbb339",
     "toolkitVersion": "ARCTIC DRAGONFLY v24.0.0",
-    "applicationHeadSha": "2e634bbd0187dc91d664da57710839c6b99a0cd4",
-    "checkedAt": "2026-10-15T00:23:23.687Z"
+    "applicationHeadSha": "fa2dc5fed5f7afd48b7da079bf8dfc2967b8df2c",
+    "checkedAt": "2026-10-15T00:30:58.247Z"
   },
-  "updatedAt": "2026-10-15T00:23:26.621Z",
+  "updatedAt": "2026-10-15T00:31:00.658Z",
   "updatedBy": "sam"
 }
