@@ -11,9 +11,9 @@ business timezone from Rosalie before reopening (October 23 versus after it).
 
 1. Run `python3 scripts/test_build_site.py` and `npm test --prefix worker`.
 2. Deploy the **generated artifact**, using `python3 scripts/build_site.py _site`.
-   The Pages workflow does this automatically on a main-branch push. The source
-   `index.html` remains the original storefront. Never deploy the source root
-   directly while closed: JavaScript would be required to hide its storefront.
+   The Pages workflow does this automatically on a main-branch push. The original storefront is preserved in `storefront.html`. Source-root publishing
+   is also protected by committed closure `index.html` and `404.html` shells.
+   `scripts/set_closure.py` keeps those shells and the closure flag together.
 3. The generated `index.html` and `404.html` are the same French announcement,
    with no storefront JavaScript and no ordering controls, even without JS.
    GitHub Pages serves unknown/deep links through `404.html` (HTTP 404 is expected).
@@ -49,7 +49,8 @@ business timezone from Rosalie before reopening (October 23 versus after it).
 
 1. Record Rosalie's approved reopening date, hour, timezone and approval with the
    release. Keep this manual until confirmed.
-2. Change only `closure.enabled` to false. Keep original `ordering.enabled` and all
+2. Run `python3 scripts/set_closure.py open` and commit its changes. This sets
+   `closure.enabled` to false and restores source shells for branch-based Pages. Keep original `ordering.enabled` and all
    catalogue/business data unchanged. If used, clear `STOREFRONT_CLOSED` and refresh
    bound `PUBLIC_SITE_DATA` on every checkout deployment.
 3. Run the tests above. Build into a fresh `_site` directory and deploy the static
@@ -58,7 +59,7 @@ business timezone from Rosalie before reopening (October 23 versus after it).
 4. Purge/revalidate CDN HTML, settings and JS. Check the regular menu, cart,
    delivery rules and admin. Verify checkout in Stripe test mode. Business-hours,
    menu, delivery and pricing validation still apply after reopening.
-5. If anything fails, set `closure.enabled=true` and the runtime emergency flag,
+5. If anything fails, run `python3 scripts/set_closure.py closed` and set the runtime emergency flag,
    rebuild and redeploy. Do not delete orders or alter Stripe catalogue records.
 
 ## Validation scope

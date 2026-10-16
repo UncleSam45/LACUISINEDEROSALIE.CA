@@ -9,11 +9,11 @@ with TemporaryDirectory() as tmp:
     build(closed, settings)
     assert (closed / 'index.html').read_bytes() == (closed / '404.html').read_bytes()
     assert b'main.js' not in (closed / 'index.html').read_bytes()
-    assert (closed / 'admin.html').read_bytes() == (ROOT / 'index.html').read_bytes()
+    assert (closed / 'admin.html').read_bytes() == (ROOT / 'storefront.html').read_bytes()
     settings['closure']['enabled'] = False
     opened = Path(tmp) / 'open'
     build(opened, settings)
-    assert (opened / 'index.html').read_bytes() == (ROOT / 'index.html').read_bytes()
+    assert (opened / 'index.html').read_bytes() == (ROOT / 'storefront.html').read_bytes()
     assert not (opened / '404.html').exists()
     assert not (opened / 'admin.html').exists()
     for path in (ROOT / 'assets/data').glob('*.json'):
