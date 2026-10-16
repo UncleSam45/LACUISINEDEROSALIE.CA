@@ -36,6 +36,11 @@ refresh. A static preview does not provide a working Stripe checkout endpoint; u
 Stripe test mode and configure one of the server-side checkout options before
 testing payments.
 
+Ticket #206 adds the standalone Admin source `api.js`. See
+[the API contract, validation gates and cutover/rollback procedure](docs/CHECKOUT_API_206.md)
+before selecting it in Admin. The legacy Worker and Pages deployment remain
+unchanged; Stripe staging and live cutover require separate validation/approval.
+
 To run the checkout test suite:
 
 ```bash

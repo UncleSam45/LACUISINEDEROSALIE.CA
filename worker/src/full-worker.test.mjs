@@ -25,6 +25,11 @@ assert.throws(() => validate({ delivery_date: '2026-08-01' }), /délai de prépa
 const order = validate();
 const catalog = { currency: 'cad', items: { paid: { prices: { familial: { price_id: 'price_paid', amount: 23 } } } } };
 assert.deepEqual(buildStripeLineItems(order.lines, catalog, site, {}), [{ price: 'price_paid', quantity: 4 }]);
+const RealDate = Date;
+globalThis.Date = class extends RealDate {
+  constructor(...args) { super(...(args.length ? args : ['2026-07-31T05:15:00Z'])); }
+  static now() { return new RealDate('2026-07-31T05:15:00Z').getTime(); }
+};
 let checkoutForm; const originalFetch = globalThis.fetch;
 globalThis.fetch = async (input, init) => {
   const url = String(input);
@@ -44,5 +49,5 @@ try {
   const standalone = await worker.fetch(new Request('https://example.test/api/create-checkout-session', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(base) }), { STRIPE_SECRET_KEY: 'sk_test_example', STRIPE_CATALOG: catalog });
   assert.equal(standalone.status, 200);
   assert.equal((await (await worker.fetch(new Request('https://example.test/api/health'), env)).json()).version, 'stripe-direct-v10');
-} finally { globalThis.fetch = originalFetch; }
+} finally { globalThis.fetch = originalFetch; globalThis.Date = RealDate; }
 console.log('full worker fulfillment tests passed');
