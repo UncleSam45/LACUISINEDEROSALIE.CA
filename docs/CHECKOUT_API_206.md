@@ -15,13 +15,21 @@ provisions `APP_STATE` and `APP_STORAGE`. Checkout does not use these bindings o
 expose them. Do not copy the private starter's user-authentication requirements
 into this explicitly public checkout application.
 
-Configure ingress mode `public_route` (UI PUBLIC_ROUTE), proposed hostname
-`lacuisinederosalie.ca`, path `/api/*`. This is a proposal only: the existing
-domain must support proxied HTTPS Worker routing before cutover. Admin's
-`worker-exposure.mjs` requires a narrow path ending `/*`, disables workers.dev and
-preview ingress, and removes extra ingress for the managed replacement. Never
-register the legacy Worker as the replacement: use a separate managed Worker.
-No Admin UI changes are included here.
+Configure ingress mode `public_route` (UI PUBLIC API), hostname
+`api.lacuisinederosalie.ca`, route `/api/*`. The storefront remains at
+`lacuisinederosalie.ca` on DNS-only GitHub Pages. This separate API hostname is
+intentional: Admin rejects a Worker route on the exact Pages-owned apex with
+`HOSTNAME_ASSIGNED_TO_PAGES`. Repeating the deployment against the apex cannot
+succeed under Admin's current ownership rules. Admin's `worker-exposure.mjs`
+requires a narrow path ending `/*`, disables workers.dev/preview ingress and
+removes extra ingress. No changes to Admin source are necessary for this topology.
+
+**Before deployment:** create and validate a **proxied** Cloudflare DNS record
+for `api.lacuisinederosalie.ca` (for a route-only Worker, a proxied AAAA
+placeholder with address `100::` is a supported approach). A Cloudflare Worker
+Route alone does not make a DNS-only hostname reachable. Do not alter the apex
+GitHub Pages DNS records or attach the API Worker to the apex. The new managed
+Worker replaces the legacy checkout behavior, not the GitHub Pages site.
 
 At PR preparation, remote main `094b0bf826da68df7b4e8b73f84bb94dbf4f454f`
 already contains Admin’s private starter api.js. This change replaces that
@@ -93,18 +101,58 @@ published browser's routing or full functional parity.
 
 The Pages adapter imports `worker.js` and injects all four JSON documents plus
 the committed Stripe catalog. The catalog declares live mode and dynamic pricing;
-do not inject it into a test-key deployment. `settings.json` already selects
-`/api/create-checkout-session`. `main.js` POSTs JSON without CrowdNet headers and
-uses `checkout_url`; no fallback endpoint is configured. Keep that relative URL
-for the proposed same-origin route. For a separate API hostname, set an absolute
-HTTPS URL only in an isolated staging storefront, allow that storefront's exact
-origin, and keep PUBLIC_SITE_ORIGIN pointed at the data host, not the API host.
+do not inject it into a test-key deployment. The storefront configuration in
+this PR now selects
+`https://api.lacuisinederosalie.ca/api/create-checkout-session`. `main.js`
+POSTs JSON without CrowdNet headers and uses `checkout_url`; no fallback
+endpoint is configured. **Do not merge this endpoint switch into production
+until the separate hostname, trusted HTTPS, route, configured secret and test
+checkout are verified.** The Worker allows the exact storefront Origin by
+default, or via `ALLOWED_ORIGIN`; `PUBLIC_SITE_ORIGIN` must remain the
+**storefront data host**, not the API hostname. A staging storefront must use
+a separate reviewed origin and test catalog/key.
 
 The storefront still contains pre-existing browser administration routines for
 GitHub/Stripe credentials (report #213). This API exposes no administrative
 operations and never sends its Stripe key to the frontend. Removing that separate
 legacy browser tooling remains an outstanding storefront security concern; this
 conversion does not certify the entire frontend secure.
+
+## Actual Admin failure and recovery sequence
+
+The attempted deploy of `crowdnet-lacuisinederosalie-ca` uploaded the Worker
+source, then failed at `worker_ingress` with
+`HOSTNAME_ASSIGNED_TO_PAGES: lacuisinederosalie.ca`. This is an ownership
+guard, **not** a leftover `rosalie-checkout` route. The managed Worker has
+no bound secrets yet because Admin enforces ingress before applying secrets.
+
+For the dedicated API host:
+
+1. **Cloudflare DNS (operator, separate authorization):** configure a proxied
+   record for `api.lacuisinederosalie.ca` only, not the Pages-owned apex.
+2. **Admin Worker deployment:** select this repository's `api.js`, PUBLIC API,
+   Public Hostname `api.lacuisinederosalie.ca`, Narrow Public Route `/api/*`.
+3. **Secrets via Admin:** add `STRIPE_SECRET_KEY` as a **secret**, initially a
+   Stripe test key. Never add it to repository JSON or plaintext variables.
+   As explicit non-secret variables, use
+   `PUBLIC_SITE_ORIGIN=https://lacuisinederosalie.ca` and
+   `ALLOWED_ORIGIN=https://lacuisinederosalie.ca`.
+4. **Test catalog:** ensure test prices match the public menu. The checked-in
+   `stripe_catalog.json` declares `environment: live`, so it must **not** be
+   used as a test-mode `STRIPE_CATALOG_JSON` binding. Prefer a verified matching
+   Stripe test catalog or test-mode prices with correct metadata.
+5. **Readiness:** verify `GET https://api.lacuisinederosalie.ca/api/health`,
+   browser CORS OPTIONS/POST, and one end-to-end Stripe test payment. Health
+   proves liveness only, not correct secret, pricing or payment readiness.
+6. **Cutover:** only after staging passes and live credentials/catalog, DNS,
+   HTTPS and rollback are approved, merge the storefront endpoint change and
+   perform a supervised live checkout check. Never merge this branch merely to
+   make the static site redeploy before the API is usable.
+
+**Admin deployment nuance:** after a failed `worker_ingress`, the uploaded
+Worker can exist with no bound secrets. Fix the public hostname and rerun the
+full Admin deployment so it reaches `secret_updates` and
+`secret_verification`; source upload alone does not finish the deployment.
 
 ## Validation and remaining gates
 
@@ -148,9 +196,9 @@ environment. No remote deployment or payment was attempted. Before acceptance:
 
 Deploy the reviewed api.js SHA to the separate managed replacement, configure
 approved live secrets and origin/catalog variables, and verify health first.
-Using existing Admin controls, switch only the approved hostname's `/api/*` route
-after storefront HTTPS/proxy prerequisites pass. Leave static Pages/DNS unchanged
-unless separately authorized. Run an approved checkout smoke check and monitor
+Using existing Admin controls, establish only the dedicated
+`api.lacuisinederosalie.ca/api/*` route after that API hostname's proxied
+DNS and HTTPS prerequisites pass. Leave the static Pages apex and its DNS unchanged. Run an approved checkout smoke check and monitor
 error rates, duplicates, price mismatches and Stripe sessions.
 
 If errors increase or checkout fails, restore the captured route target and
