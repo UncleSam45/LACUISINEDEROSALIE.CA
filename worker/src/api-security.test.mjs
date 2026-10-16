@@ -15,6 +15,8 @@ const preflight = await api.fetch(request('/api/create-checkout-session','OPTION
 assert.equal(preflight.status,204);
 assert.equal(preflight.headers.get('Access-Control-Allow-Origin'),origin);
 assert.equal(preflight.headers.has('Access-Control-Allow-Credentials'),false);
+assert.equal((await api.fetch(request('/api/create-checkout-session','OPTIONS',{Origin:'https://untrusted.test'}),env)).status,403);
+assert.equal((await api.fetch(request('/api/health','GET',{Origin:origin}),env)).headers.get('Access-Control-Allow-Origin'),origin);
 assert.equal((await api.fetch(request('/api/health','GET',{Origin:origin}),{PUBLIC_SITE_ORIGIN:'http://bad.test'})).status,500);
 const server = {...env,STRIPE_SECRET_KEY:'sk_test_fake'};
 assert.equal((await api.fetch(request('/api/create-checkout-session','POST',{'Content-Type':'text/plain'},'{}'),server)).status,415);
@@ -52,9 +54,14 @@ const context = vm.createContext({state:{data:site},fetch:async (url,init)=>{
 }});
 vm.runInContext(client,context);
 assert.equal(await vm.runInContext('requestCheckoutSession({items:[]})',context),'https://checkout.stripe.test/session');
-assert.equal(sent.url,'/api/create-checkout-session');
+assert.equal(site.settings.ordering.checkout_endpoint,'https://api.lacuisinederosalie.ca/api/create-checkout-session');
+assert.equal(new URL(site.settings.ordering.checkout_endpoint).origin,'https://api.lacuisinederosalie.ca');
+assert.equal(sent.url,site.settings.ordering.checkout_endpoint);
 assert.equal(sent.method,'POST');
 assert.equal(sent.headers['Content-Type'],'application/json');
 assert.equal(Object.keys(sent.headers).length,1);
 assert.deepEqual(JSON.parse(sent.body),{items:[]});
+const offline = vm.createContext({state:{data:site},fetch:async () => {throw new TypeError('Failed to fetch')}});
+vm.runInContext(client,offline);
+await assert.rejects(vm.runInContext('requestCheckoutSession({items:[]})',offline), /Le service de paiement est temporairement indisponible/);
 console.log('Admin API public routes, limits, committed data and business regressions passed');
