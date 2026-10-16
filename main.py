@@ -255,21 +255,21 @@ def build_ui(port: int) -> None:
         print(format_frontend_console_message(payload, client_host), flush=True)
         return {"ok": True}
 
-    ui.page_title("La cuisine de Rosalie | Menu de la semaine du 3 juillet au 9 juillet")
+    from fastapi.responses import FileResponse
 
-    ui.add_head_html("""
-    <style>
-      .nicegui-content { padding: 0 !important; }
-      #webframe-root { width: 100vw; min-height: 100vh; }
-    </style>
-    """)
-    ui.element("div").props('id="webframe-root"')
+    # Preview the actual public document instead of constructing a second
+    # storefront that bypasses index.html.
+    @app.get("/", include_in_schema=False)
+    @app.get("/index.html", include_in_schema=False)
+    def public_index() -> FileResponse:
+        return FileResponse(BASE_DIR / "index.html", headers={"Cache-Control": "no-store"})
 
-    app_js_version = int(JS_FILE.stat().st_mtime) if JS_FILE.exists() else 0
+    @app.get("/logo.png", include_in_schema=False)
+    def public_logo() -> FileResponse:
+        return FileResponse(BASE_DIR / "logo.png")
+
     app.add_static_files('/assets', str(BASE_DIR / 'assets'))
     app.add_static_files('/static', str(BASE_DIR))
-    ui.add_body_html(f"<script>{CONSOLE_FORWARDER_JS}</script>")
-    ui.add_body_html(f'<script src="/static/main.js?v={app_js_version}"></script>')
 
     ui.run(host="0.0.0.0", port=port, reload=False, show=False)
 
