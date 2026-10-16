@@ -1,3 +1,12 @@
+/*
+  Cache-Control: no-store, max-age=0
+/admin.html
+  Cache-Control: no-store
+/404.html
+  Cache-Control: no-store
+/closure.html
+  Cache-Control: no-store
+
 # Keep the HTML shell and app bootstrap revalidated so returning visitors see new deployments.
 /
   Cache-Control: no-cache, no-store, must-revalidate
