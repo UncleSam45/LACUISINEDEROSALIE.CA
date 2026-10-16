@@ -3,7 +3,9 @@
 This change replaces the public storefront with a static French welcome screen:
 « Nous serons de retour le 23 octobre. » No exact reopening time is advertised.
 
-Only the public HTML, its stylesheet, and screenshots change. There are no
+The public HTML, its stylesheet, screenshots, and local preview launcher change.
+`python main.py` serves the same index.html rather than loading main.js directly.
+Restart the launcher after updating it. There are no
 Worker, API, ordering-settings, Stripe, DNS or secret changes. No scripts or
 automatic reopening are included. The existing checkout backend is unchanged;
 this page does not enforce a backend ordering shutdown.
