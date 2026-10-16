@@ -1,0 +1,25 @@
+# Keep the HTML shell and app bootstrap revalidated so returning visitors see new deployments.
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+/main.js
+  Cache-Control: no-cache, no-store, must-revalidate, max-age=0
+
+# Retired service-worker entry points must never be served from an HTTP cache.
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+/service-worker.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Menu, delivery, promotion, and content JSON should never be reused stale.
+/assets/data/*
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# The weekly menu image is replaced in place and must be revalidated immediately.
+/assets/images/items/MENU.png
+  Cache-Control: no-cache, no-store, must-revalidate, max-age=0
+
+# Image assets can be cached by the browser/CDN; replace filenames when changing an image.
+/assets/images/*
+  Cache-Control: public, max-age=604800
