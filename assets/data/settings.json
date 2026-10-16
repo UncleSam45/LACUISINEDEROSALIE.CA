@@ -24,5 +24,11 @@
   "trust": {
     "hygiene_statement": "Formation en hygiène et salubrité alimentaires.",
     "mapaq_wording_confirmed": false
+  },
+  "closure": {
+    "enabled": true,
+    "announced_until": "2026-10-23",
+    "reopening_confirmed": false,
+    "reopens_at": null
   }
 }

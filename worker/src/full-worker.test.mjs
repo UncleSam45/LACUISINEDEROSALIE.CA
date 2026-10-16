@@ -34,15 +34,19 @@ globalThis.fetch = async (input, init) => {
   checkoutForm = new URLSearchParams(init.body);
   return Response.json({ id: 'cs_test_ok', url: 'https://checkout.stripe.test/session' });
 };
+const RealDate = globalThis.Date;
+globalThis.Date = class extends RealDate {
+  constructor(...args) { super(...(args.length ? args : ['2026-07-31T05:15:00Z'])); }
+};
 try {
   const env = { STRIPE_SECRET_KEY: 'sk_test_example', PUBLIC_SITE_DATA: site, STRIPE_CATALOG: catalog };
   const response = await worker.fetch(new Request('https://example.test/api/create-checkout-session', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(base) }), env);
-  assert.equal(response.status, 200); assert.equal(response.headers.get('X-Checkout-Worker-Version'), 'stripe-direct-v10');
+  assert.equal(response.status, 200); assert.equal(response.headers.get('X-Checkout-Worker-Version'), 'stripe-direct-v11-closure');
   assert.equal(checkoutForm.get('metadata[fulfillment_option_id]'), 'delivery_flexible_day'); assert.equal(checkoutForm.has('metadata[delivery_window_1]'), false);
   // The standalone production Worker has no Pages import binding. It must load
   // the authoritative published JSON instead of returning the regression 503.
   const standalone = await worker.fetch(new Request('https://example.test/api/create-checkout-session', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(base) }), { STRIPE_SECRET_KEY: 'sk_test_example', STRIPE_CATALOG: catalog });
   assert.equal(standalone.status, 200);
-  assert.equal((await (await worker.fetch(new Request('https://example.test/api/health'), env)).json()).version, 'stripe-direct-v10');
-} finally { globalThis.fetch = originalFetch; }
+  assert.equal((await (await worker.fetch(new Request('https://example.test/api/health'), env)).json()).version, 'stripe-direct-v11-closure');
+} finally { globalThis.fetch = originalFetch; globalThis.Date = RealDate; }
 console.log('full worker fulfillment tests passed');
