@@ -735,7 +735,6 @@
   }
 
   async function checkout() {
-    if (state.data.settings?.closure?.enabled === true) { render(); return; }
     if (state.checkoutLoading) return;
     const errors = validateOrder();
     if (errors.length) {
@@ -1586,11 +1585,6 @@
 
   function render() {
     const root = document.getElementById('webframe-root');
-    if (state.data.settings?.closure?.enabled === true && state.page !== 'admin') {
-      root.innerHTML = `<main class="loading-shell"><section><h1>La cuisine de Rosalie est temporairement fermée.</h1><p>Nous serons fermés jusqu’au 23 octobre 2026.</p><p>Les commandes en ligne sont suspendues. Merci de votre compréhension et à très bientôt !</p></section></main>${adminLaunchHtml()}`;
-      bindEvents(root);
-      return;
-    }
     const pages = { home: homeHtml, menu: menuPageHtml, commander: commanderHtml, traiteur: traiteurHtml, livraison: livraisonHtml, contact: contactHtml, admin: adminHtml };
     const checkoutConfirmation = state.checkoutSuccess
       ? '<section class="container notice success-note" role="status" style="margin-top:18px"><strong>Commande confirmée!</strong><br>Votre paiement a été reçu et votre panier a été vidé. Merci pour votre commande.</section>'

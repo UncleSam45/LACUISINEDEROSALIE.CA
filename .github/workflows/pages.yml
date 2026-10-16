@@ -28,14 +28,12 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Validate closure and checkout
-        run: |
-          python3 scripts/test_build_site.py
-          npm test --prefix worker
-
       - name: Assemble static site
         run: |
-          python3 scripts/build_site.py _site
+          mkdir _site
+          cp index.html main.js logo.png banner.png CNAME _site/
+          cp -R assets _site/assets
+          touch _site/.nojekyll
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4

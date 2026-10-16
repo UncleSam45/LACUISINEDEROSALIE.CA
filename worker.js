@@ -1,7 +1,7 @@
 const STRIPE_CHECKOUT_URL = 'https://api.stripe.com/v1/checkout/sessions';
 const STRIPE_PRICES_URL = 'https://api.stripe.com/v1/prices';
 const DEFAULT_CURRENCY = 'cad';
-const WORKER_VERSION = 'stripe-direct-v11-closure';
+const WORKER_VERSION = 'stripe-direct-v10';
 const WEEKDAYS = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 const WEEKEND_DAYS = new Set(['saturday', 'sunday']);
 const PORTION_LABELS = { petit: 'Petit', grand: 'Grand', familial: 'Familial', standard: 'Format unique' };
@@ -27,13 +27,11 @@ export default {
 };
 
 async function createCheckoutSession(request, env) {
-  if (env.STOREFRONT_CLOSED === true || env.STOREFRONT_CLOSED === 'true') throw publicError('La cuisine de Rosalie est temporairement fermée. Les commandes sont suspendues.', 503);
-  const site = await loadSiteData(request, env);
-  assertOrderingOpen(site);
   if (!env.STRIPE_SECRET_KEY || !/^sk_(test|live)_/.test(env.STRIPE_SECRET_KEY)) throw publicError('Configuration Stripe manquante côté serveur.', 500);
   const payload = await readJsonBody(request);
   const origin = getPublicSiteOrigin(request, env);
   const catalog = await loadCheckoutCatalog(env);
+  const site = await loadSiteData(request, env);
   const order = validateOrder(payload, site);
   const lineItems = buildStripeLineItems(order.lines, catalog, site, env);
   const orderId = makeOrderId();
@@ -123,7 +121,7 @@ async function loadSiteData(request, env) {
     const paths = ['settings', 'menus', 'items', 'delivery'];
     try {
       const responses = await Promise.all(paths.map((name) => fetch(`${origin}/assets/data/${name}.json`, {
-        headers: { Accept: 'application/json' }, cache: 'no-store',
+        headers: { Accept: 'application/json' }, cf: { cacheTtl: 60, cacheEverything: true },
       })));
       if (responses.some((response) => !response.ok)) throw new Error(`HTTP ${responses.map((response) => response.status).join('/')}`);
       const documents = await Promise.all(responses.map((response) => response.json()));
@@ -147,13 +145,7 @@ function getPublicSiteOrigin(request, env) {
   try { return new URL(env.PUBLIC_SITE_ORIGIN || new URL(request.url).origin).origin; } catch { return new URL(request.url).origin; }
 }
 
-function assertOrderingOpen(site) {
-  if (site.settings?.closure?.enabled === true) throw publicError('La cuisine de Rosalie est temporairement fermée. Les commandes sont suspendues.', 503);
-  if (site.settings?.ordering?.enabled === false) throw publicError('Les commandes en ligne sont désactivées.', 503);
-}
-
 export function validateOrder(payload, site, now = new Date()) {
-  assertOrderingOpen(site);
   if (!payload || typeof payload !== 'object') throw publicError('Commande invalide.', 400);
   if (!Array.isArray(payload.items) || !payload.items.length) throw publicError('Le panier est vide.', 400);
   if (payload.items.length > 50) throw publicError('Le panier ne peut pas contenir plus de 50 articles.', 400);
