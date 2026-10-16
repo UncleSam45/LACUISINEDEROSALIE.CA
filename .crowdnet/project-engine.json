@@ -6,14 +6,14 @@
   "watermark": null,
   "comparison": {
     "status": "update",
-    "missing": 6,
-    "older": 0,
+    "missing": 0,
+    "older": 22,
     "incomplete": 0,
-    "toolkitHeadSha": "f2edadf6e0c4f9d09a9d4f7adb9322144fdbb339",
-    "toolkitVersion": "ARCTIC DRAGONFLY v24.0.0",
-    "applicationHeadSha": "920eda2021e31e976facf365e9084c2bcd9539a8",
-    "checkedAt": "2026-10-16T02:49:53.751Z"
+    "toolkitHeadSha": "7220570532237aa75612896a0d12132a8af5cee8",
+    "toolkitVersion": "ARCTIC DRAGONFLY v27.0.0",
+    "applicationHeadSha": "93cdf3759f724b5f5cb97eb3fd899814c6f4cfd8",
+    "checkedAt": "2026-10-16T02:57:41.896Z"
   },
-  "updatedAt": "2026-10-16T02:49:55.343Z",
+  "updatedAt": "2026-10-16T02:57:43.547Z",
   "updatedBy": "sam"
 }
