@@ -939,6 +939,13 @@
     const featuredItems = currentAvailableItems.filter((item) => item.featured === true);
     const menuItems = (featuredItems.length ? featuredItems : currentAvailableItems).slice(0, 3);
     const zones = getEnabledZones().map((zone) => zone.city).join(', ');
+    const heroItems = getCurrentMenuImageItems();
+    const activeHeroItem = heroItems.length ? heroItems[state.carousel.index % heroItems.length] : null;
+    // MENU.png is deliberately replaced in place by the weekly publishing
+    // workflow. Give each page load a fresh URL so browser and CDN image caches
+    // cannot keep showing the previous week's menu.
+    const heroImage = freshLocalAssetPath('assets/images/items/MENU.png');
+    const heroImageFallback = itemImagePath(activeHeroItem, 'hero') || state.data.content.home?.hero_image || localAssetPath('banner.png');
     const orderWindow = getWeeklyOrderWindow();
     return `
       <section class="hero container">
@@ -950,13 +957,9 @@
           <div class="cta-row">${menuIsActive ? '<button class="btn btn-primary" data-page="menu">Voir le menu de la semaine</button><button class="btn btn-secondary" data-page="commander">Planifier ma commande</button>' : '<button class="btn btn-primary" data-page="menu">Voir le message</button><button class="btn btn-secondary" data-page="contact">Nous contacter</button>'}</div>
           <div class="trust-chips"><span class="chip">Fait maison</span><span class="chip">Livraison locale</span>${menuIsActive ? `<span class="chip">Commande ${orderNoticeText()}</span><span class="chip">Formats Petit / Grand / Famille</span>` : '<span class="chip">Menu de la semaine</span>'}</div>
         </div>
-        <aside class="panel" aria-label="Le nouveau menu">
-          <div class="kicker">La cuisine de Rosalie</div><h2>Nouveau menu</h2>
-          <div class="chip-row"><span class="chip">Petit · 1 pers. · 8 $</span><span class="chip">Grand · Pour appétits · 12 $</span><span class="chip">Famille · À partager · 23 $</span></div>
-          <ul style="line-height:2;padding-left:1.2em">${getMenuItems().map((item) => `<li>${escapeHtml(item.title)}</li>`).join('')}</ul>
-          <p>Soupe · 4 $ &nbsp; Salades et collations · 5 $ &nbsp; Sous-marins · 7 $</p>
-          <a class="btn btn-secondary" href="${escapeHtml(state.data.settings.business.messenger_url)}">Commander par Messenger</a>
-        </aside>
+        <div class="hero-visual weekly-menu-visual">
+          <img src="${escapeHtml(heroImage)}" alt="Menu de la semaine de La cuisine de Rosalie" loading="eager" decoding="async" onerror="this.onerror=null;this.src='${escapeHtml(heroImageFallback)}';this.classList.add('fallback')">
+        </div>
       </section>
       <section class="availability-strip container" aria-label="Disponibilité du menu">
         <span><strong>${menuIsActive ? 'Période:' : 'Statut:'}</strong> ${menuIsActive ? `${formatOrderDate(orderWindow.opensAt)} au ${formatOrderDate(orderWindow.closesAt)}` : 'Menu de la semaine'}</span>
