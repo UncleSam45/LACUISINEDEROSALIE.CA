@@ -1,12 +1,12 @@
 {
   "items": [
     {
-      "id": "item_26307a652827476980354316c080cd0b",
-      "title": "Penne alfredo au poulet",
+      "id": "nouilles-asiatiques-poulet_20261023",
+      "title": "Nouilles asiatiques au poulet",
       "description": "1 personne (Petit), pour appétits (Grand) ou parfait pour partager (Famille).",
       "category": "Les plats",
       "available": true,
-      "featured": false,
+      "featured": true,
       "image": "",
       "pricing": {
         "petit": 8,
@@ -17,12 +17,12 @@
       "showcase": false
     },
     {
-      "id": "item_8f00ff58b47f4fafb5686030089d0a3f",
-      "title": "Boulettes asiatiques avec riz aux légumes",
+      "id": "couscous-grec_20261023",
+      "title": "Couscous grec",
       "description": "1 personne (Petit), pour appétits (Grand) ou parfait pour partager (Famille).",
       "category": "Les plats",
       "available": true,
-      "featured": false,
+      "featured": true,
       "image": "",
       "pricing": {
         "petit": 8,
@@ -33,12 +33,12 @@
       "showcase": false
     },
     {
-      "id": "item_4570c42189c642e6968759d6757c8a61",
-      "title": "Lasagne pepperoni fromage",
+      "id": "spaghetti-sauce-viande_20261023",
+      "title": "Spaghetti sauce à la viande",
       "description": "1 personne (Petit), pour appétits (Grand) ou parfait pour partager (Famille).",
       "category": "Les plats",
       "available": true,
-      "featured": false,
+      "featured": true,
       "image": "",
       "pricing": {
         "petit": 8,
@@ -49,12 +49,12 @@
       "showcase": false
     },
     {
-      "id": "item_c7297097395c46829ef6ad53fe1e764f",
-      "title": "Chaudron de saucisses, patates et légumes",
+      "id": "pate-chinois_20261023",
+      "title": "Pâté chinois",
       "description": "1 personne (Petit), pour appétits (Grand) ou parfait pour partager (Famille).",
       "category": "Les plats",
       "available": true,
-      "featured": false,
+      "featured": true,
       "image": "",
       "pricing": {
         "petit": 8,
@@ -65,12 +65,12 @@
       "showcase": false
     },
     {
-      "id": "item_23a1fbe8db3c4da58e405faad9698986",
-      "title": "Porc miel et ail, riz et brocoli",
+      "id": "riz-chinois-boeuf_20261023",
+      "title": "Riz chinois au bœuf",
       "description": "1 personne (Petit), pour appétits (Grand) ou parfait pour partager (Famille).",
       "category": "Les plats",
       "available": true,
-      "featured": false,
+      "featured": true,
       "image": "",
       "pricing": {
         "petit": 8,
@@ -138,7 +138,7 @@
     },
     {
       "id": "item_37c8871cecd7410c803011694297d1eb",
-      "title": "Collation yogourt grec et bleuets",
+      "title": "Collation yogourt et bleuets",
       "description": "Préparé maison avec soin.",
       "category": "Collations",
       "available": true,
