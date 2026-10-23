@@ -11,15 +11,13 @@
     "menus_json": "assets/data/menus.json"
   },
   "menu": {
-    "id": "menu-2026-09-18",
-    "title": "Menu actuel",
-    "start_date": "2026-09-18",
-    "end_date": "2026-09-23"
+    "id": "menu-2026-10-23",
+    "title": "Nouveau menu",
+    "start_date": "2026-10-23",
+    "end_date": ""
   },
   "items": {
-    "item_26307a652827476980354316c080cd0b": {
-      "title": "Penne alfredo au poulet",
-      "category": "Les plats",
+    "nouilles-asiatiques-poulet_20261023": {
       "product_id": "",
       "active": true,
       "prices": {
@@ -41,11 +39,11 @@
           "currency": "cad",
           "active": false
         }
-      }
+      },
+      "title": "Nouilles asiatiques au poulet",
+      "category": "Les plats"
     },
-    "item_8f00ff58b47f4fafb5686030089d0a3f": {
-      "title": "Boulettes asiatiques avec riz aux légumes",
-      "category": "Les plats",
+    "couscous-grec_20261023": {
       "product_id": "",
       "active": true,
       "prices": {
@@ -67,11 +65,11 @@
           "currency": "cad",
           "active": false
         }
-      }
+      },
+      "title": "Couscous grec",
+      "category": "Les plats"
     },
-    "item_4570c42189c642e6968759d6757c8a61": {
-      "title": "Lasagne pepperoni fromage",
-      "category": "Les plats",
+    "spaghetti-sauce-viande_20261023": {
       "product_id": "",
       "active": true,
       "prices": {
@@ -93,11 +91,11 @@
           "currency": "cad",
           "active": false
         }
-      }
+      },
+      "title": "Spaghetti sauce à la viande",
+      "category": "Les plats"
     },
-    "item_c7297097395c46829ef6ad53fe1e764f": {
-      "title": "Chaudron de saucisses, patates et légumes",
-      "category": "Les plats",
+    "pate-chinois_20261023": {
       "product_id": "",
       "active": true,
       "prices": {
@@ -119,11 +117,11 @@
           "currency": "cad",
           "active": false
         }
-      }
+      },
+      "title": "Pâté chinois",
+      "category": "Les plats"
     },
-    "item_23a1fbe8db3c4da58e405faad9698986": {
-      "title": "Porc miel et ail, riz et brocoli",
-      "category": "Les plats",
+    "riz-chinois-boeuf_20261023": {
       "product_id": "",
       "active": true,
       "prices": {
@@ -145,7 +143,9 @@
           "currency": "cad",
           "active": false
         }
-      }
+      },
+      "title": "Riz chinois au bœuf",
+      "category": "Les plats"
     },
     "item_b7a6f709ed924c83834f1289fd883f11": {
       "title": "Soupe aux légumes",
@@ -204,7 +204,7 @@
       }
     },
     "item_37c8871cecd7410c803011694297d1eb": {
-      "title": "Collation yogourt grec et bleuets",
+      "title": "Collation yogourt et bleuets",
       "category": "Collations",
       "product_id": "",
       "active": true,
