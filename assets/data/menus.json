@@ -1,0 +1,301 @@
+{
+  "current_menu": {
+    "id": "menu-2026-09-18",
+    "active": true,
+    "title": "Menu actuel",
+    "description": "Plats maison en formats Petit, Grand et Famille, avec soupes, salades, collations et sous-marins. Commandez au moins 72 heures à l’avance.",
+    "start_date": "2026-09-18",
+    "end_date": "2026-09-23",
+    "item_ids": [
+      "item_26307a652827476980354316c080cd0b",
+      "item_8f00ff58b47f4fafb5686030089d0a3f",
+      "item_4570c42189c642e6968759d6757c8a61",
+      "item_c7297097395c46829ef6ad53fe1e764f",
+      "item_23a1fbe8db3c4da58e405faad9698986"
+    ],
+    "extra_ids": [
+      "item_b7a6f709ed924c83834f1289fd883f11",
+      "item_80b3401cebcd4995b1f5930d6ffbc295",
+      "item_7e75b8a217584d5f8e023e25ccb5a6c2",
+      "item_63f0ee3ff25b4527a1b84979068dc20f",
+      "item_37c8871cecd7410c803011694297d1eb",
+      "item_d1083d37c9c94f3195fbaf054d337334",
+      "item_f7f1e87d186c4974ae48550eae09f334"
+    ],
+    "promotion_ids": []
+  },
+  "archive": [
+    {
+      "id": "menu-2026-08-28",
+      "active": true,
+      "title": "Nouveau menu",
+      "description": "NOUVEAU MENU , de nouveaux plats et de nouvelles collations pour tous. Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-09-11",
+      "end_date": "2026-09-16",
+      "item_ids": [
+        "item_f4b3ab49ce014d7095be301592536dd2",
+        "item_3ca9e12d27b745c7b228a4dcfef55e5e",
+        "item_91fa4681a1c344f0914c22ef2cfccf19",
+        "item_2ab149806f5c477f91db514c08c4f9a1",
+        "item_c31e46bb03674e5c9eecc158ed305baa"
+      ],
+      "extra_ids": [
+        "item_d009e983814b47fdafd39dbeaec49200",
+        "item_880771be5305474b9e10444d20bb77f2",
+        "item_7615c607daa24656970c167778c33cca",
+        "item_7515ffacaabd4444a03ce438cde197e8",
+        "item_24206193a37d4492b6da6162fec27304",
+        "item_fef3968e8a0e4cef871f83899cb8881d",
+        "item_10ea4e76e47d45be978490f54566b88e"
+      ],
+      "promotion_ids": []
+    },
+    {
+      "id": "menu-2026-08-21",
+      "active": true,
+      "title": "Nouveau menu",
+      "description": "Découvrez cinq plats maison en formats Petit, Grand et Famille, ainsi que notre soupe, nos salades et nos sous-marins. Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-08-21",
+      "end_date": "2026-08-31",
+      "item_ids": [
+        "rotini-alfredo-bacon_20260821",
+        "porc-general-tao-riz_20260821",
+        "poulet-marine-riz-legumes_20260821",
+        "riz-chinois-boeuf-legumes_20260821",
+        "lasagne-pepperoni-fromage_20260821"
+      ],
+      "extra_ids": [
+        "soupe-legumes_20260821",
+        "salade-chef_20260821",
+        "salade-cesar_20260821",
+        "salade-grecque_20260821",
+        "sous-marin-pizza_20260821",
+        "sous-marin-viandes-froides_20260821",
+        "sous-marin-poulet-bbq_20260821"
+      ],
+      "promotion_ids": []
+    },
+    {
+      "id": "menu-2026-08-14",
+      "active": true,
+      "title": "Dernière semaine du menu réduit",
+      "description": "Dernière semaine du menu réduit avant les vacances. Merci de votre compréhension! Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-08-14",
+      "end_date": "2026-08-31",
+      "item_ids": [
+        "spaghetti-sauce-viande_20260814",
+        "poulet-beurre-riz_20260814",
+        "pizza-pepperoni-pain-naan_20260814",
+        "salade-repas-poulet-marine-legumes_20260814"
+      ],
+      "extra_ids": [
+        "soupe-legumes_20260814",
+        "salade-chef_20260814",
+        "salade-cesar_20260814",
+        "salade-grecque_20260814",
+        "sous-marin-pizza_20260814",
+        "sous-marin-viandes-froides_20260814",
+        "sous-marin-poulet-bbq_20260814"
+      ],
+      "promotion_ids": []
+    },
+    {
+      "id": "menu-2026-08-07",
+      "active": true,
+      "title": "Menu réduit pour les vacances",
+      "description": "Les vacances approchent et le menu est allégé pour cette période. Merci de votre compréhension! Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-08-07",
+      "end_date": "2026-08-31",
+      "item_ids": [
+        "penne-sauce-rosee-saucisses-italiennes_20260807",
+        "macaroni-chinois-au-poulet_20260807",
+        "lanieres-porc-cremeuses-champignons-riz_20260807",
+        "boulettes-bacon-patates-pilees_20260807"
+      ],
+      "extra_ids": [
+        "soupe-poulet-nouilles_20260807",
+        "salade-grecque_20260807",
+        "sous-marin-jambon-fromage_20260807"
+      ],
+      "promotion_ids": []
+    },
+    {
+      "id": "menu-2026-08-28",
+      "active": true,
+      "title": "Petit menu — semaine de réorganisation",
+      "description": "Cette semaine, profitez d’un petit menu maison en formats Petit, Grand et Famille, accompagné de notre dessert, de la soupe, des salades et des sous-marins. Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-08-28",
+      "end_date": "2026-09-03",
+      "item_ids": [
+        "macaroni-viande_20260828",
+        "pizza-jambon-pitas_20260828",
+        "muffin-pepites-chocolat_20260828"
+      ],
+      "extra_ids": [
+        "soupe-legumes_20260828",
+        "salade-chef_20260828",
+        "salade-cesar_20260828",
+        "salade-grecque_20260828",
+        "sous-marin-pizza_20260828",
+        "sous-marin-viandes-froides_20260828",
+        "sous-marin-poulet-bbq_20260828"
+      ],
+      "promotion_ids": []
+    },
+    {
+      "id": "menu-2026-08-28",
+      "active": true,
+      "title": "Petit menu — semaine de réorganisation",
+      "description": "Cette semaine, profitez d’un petit menu maison en formats Petit, Grand et Famille, accompagné de notre dessert, de la soupe, des salades et des sous-marins. Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-08-28",
+      "end_date": "2026-09-01",
+      "item_ids": [
+        "macaroni-viande_20260828",
+        "pizza-jambon-pitas_20260828",
+        "muffin-pepites-chocolat_20260828"
+      ],
+      "extra_ids": [
+        "soupe-legumes_20260828",
+        "salade-chef_20260828",
+        "salade-cesar_20260828",
+        "salade-grecque_20260828",
+        "sous-marin-pizza_20260828",
+        "sous-marin-viandes-froides_20260828",
+        "sous-marin-poulet-bbq_20260828"
+      ],
+      "promotion_ids": []
+    },
+    {
+      "id": "menu-2026-08-28",
+      "active": true,
+      "title": "Petit menu — semaine de réorganisation",
+      "description": "Cette semaine, profitez d’un petit menu maison en formats Petit, Grand et Famille, accompagné de notre dessert, de la soupe, des salades et des sous-marins. Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-08-28",
+      "end_date": "2026-09-01",
+      "item_ids": [
+        "macaroni-viande_20260828",
+        "pizza-jambon-pitas_20260828",
+        "muffin-pepites-chocolat_20260828",
+        "porc-a-la-grecque-avec-patates-cubes_20260902",
+        "nouilles-saute-aux-legumes_20260902"
+      ],
+      "extra_ids": [
+        "soupe-legumes_20260828",
+        "salade-chef_20260828",
+        "salade-cesar_20260828",
+        "salade-grecque_20260828",
+        "sous-marin-pizza_20260828",
+        "sous-marin-viandes-froides_20260828",
+        "collation-raisin-fromage_20260902",
+        "collation-celeri-fromage-a-la-creme_20260902",
+        "collation-carottes-brocolis-trempette-maison_20260902",
+        "collation-bleuets-yogourt-grecque_20260902"
+      ],
+      "promotion_ids": []
+    },
+    {
+      "id": "menu-2026-08-28",
+      "active": true,
+      "title": "Nouveau menu",
+      "description": "NOUVEAU MENU , de nouveaux plats et de nouvelles collations pour tous. Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-09-04",
+      "end_date": "2026-09-09",
+      "item_ids": [
+        "macaroni-viande_20260828",
+        "pizza-jambon-pitas_20260828",
+        "muffin-pepites-chocolat_20260828",
+        "porc-a-la-grecque-avec-patates-cubes_20260902",
+        "nouilles-saute-aux-legumes_20260902"
+      ],
+      "extra_ids": [
+        "soupe-legumes_20260828",
+        "salade-chef_20260828",
+        "salade-cesar_20260828",
+        "salade-grecque_20260828",
+        "sous-marin-pizza_20260828",
+        "sous-marin-viandes-froides_20260828",
+        "collation-raisin-fromage_20260902",
+        "collation-celeri-fromage-a-la-creme_20260902",
+        "collation-carottes-brocolis-trempette-maison_20260902",
+        "collation-bleuets-yogourt-grecque_20260902"
+      ],
+      "promotion_ids": []
+    },
+    {
+      "id": "menu-2026-08-28",
+      "active": true,
+      "title": "Nouveau menu",
+      "description": "NOUVEAU MENU , de nouveaux plats et de nouvelles collations pour tous. Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-09-04",
+      "end_date": "2026-09-09",
+      "item_ids": [
+        "macaroni-viande_20260828",
+        "pizza-jambon-pitas_20260828",
+        "muffin-pepites-chocolat_20260828",
+        "porc-a-la-grecque-avec-patates-cubes_20260902",
+        "nouilles-saute-aux-legumes_20260902"
+      ],
+      "extra_ids": [
+        "soupe-legumes_20260828",
+        "salade-chef_20260828",
+        "salade-grecque_20260828",
+        "sous-marin-pizza_20260828",
+        "sous-marin-viandes-froides_20260828",
+        "collation-raisin-fromage_20260902",
+        "collation-celeri-fromage-a-la-creme_20260902",
+        "collation-bleuets-yogourt-grecque_20260902"
+      ],
+      "promotion_ids": []
+    },
+    {
+      "id": "menu-2026-08-28",
+      "active": true,
+      "title": "Nouveau menu",
+      "description": "NOUVEAU MENU , de nouveaux plats et de nouvelles collations pour tous. Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-09-11",
+      "end_date": "2026-09-16",
+      "item_ids": [
+        "macaroni-viande_20260828",
+        "pizza-jambon-pitas_20260828",
+        "muffin-pepites-chocolat_20260828",
+        "porc-a-la-grecque-avec-patates-cubes_20260902",
+        "nouilles-saute-aux-legumes_20260902"
+      ],
+      "extra_ids": [
+        "soupe-legumes_20260828",
+        "salade-chef_20260828",
+        "salade-grecque_20260828",
+        "sous-marin-pizza_20260828",
+        "sous-marin-viandes-froides_20260828",
+        "collation-celeri-fromage-a-la-creme_20260902",
+        "collation-bleuets-yogourt-grecque_20260902"
+      ],
+      "promotion_ids": []
+    },
+    {
+      "id": "menu-2026-09-18",
+      "active": true,
+      "title": "Menu actuel",
+      "description": "Plats maison en formats Petit, Grand et Famille, avec soupes, salades, collations et sous-marins. Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-09-18",
+      "end_date": "2026-09-23",
+      "item_ids": [
+        "penne-alfredo-poulet_20260918",
+        "boulettes-asiatiques-riz-legumes_20260918",
+        "lasagne-pepperoni-fromage_20260821",
+        "chaudron-saucisses-patates-legumes_20260918",
+        "porc-miel-ail-riz-brocoli_20260918"
+      ],
+      "extra_ids": [
+        "item_d009e983814b47fdafd39dbeaec49200",
+        "salade-chef_20260828",
+        "item_7615c607daa24656970c167778c33cca",
+        "item_fef3968e8a0e4cef871f83899cb8881d",
+        "item_10ea4e76e47d45be978490f54566b88e",
+        "item_24206193a37d4492b6da6162fec27304",
+        "item_7515ffacaabd4444a03ce438cde197e8"
+      ],
+      "promotion_ids": []
+    }
+  ]
+}

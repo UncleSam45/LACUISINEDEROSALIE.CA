@@ -1,0 +1,150 @@
+{
+  "items": [
+    {
+      "id": "macaroni-viande_20260828",
+      "title": "Macaroni à la viande",
+      "description": "Préparé maison avec soin.",
+      "category": "Les plats",
+      "available": true,
+      "featured": false,
+      "image": "",
+      "pricing": {
+        "petit": 8,
+        "grand": 12,
+        "familial": 23
+      },
+      "tags": [],
+      "showcase": false
+    },
+    {
+      "id": "pizza-jambon-pitas_20260828",
+      "title": "Pizza au jambon sur pitas",
+      "description": "Préparé maison avec soin.",
+      "category": "Les plats",
+      "available": true,
+      "featured": false,
+      "image": "",
+      "pricing": {
+        "petit": 8,
+        "grand": 12,
+        "familial": 23
+      },
+      "tags": [],
+      "showcase": false
+    },
+    {
+      "id": "muffin-pepites-chocolat_20260828",
+      "title": "Muffin aux pépites de chocolat",
+      "description": "Préparé maison avec soin.",
+      "category": "Les desserts",
+      "available": true,
+      "featured": false,
+      "image": "",
+      "pricing": {
+        "petit": 8,
+        "grand": 12,
+        "familial": 23
+      },
+      "tags": [],
+      "showcase": false
+    },
+    {
+      "id": "soupe-legumes_20260828",
+      "title": "Soupe aux légumes",
+      "description": "Préparé maison avec soin.",
+      "category": "Les soupes",
+      "available": true,
+      "featured": false,
+      "image": "",
+      "pricing": {
+        "standard": 4
+      },
+      "tags": [],
+      "showcase": false
+    },
+    {
+      "id": "salade-chef_20260828",
+      "title": "Salade chef",
+      "description": "Préparé maison avec soin.",
+      "category": "Les salades",
+      "available": true,
+      "featured": false,
+      "image": "",
+      "pricing": {
+        "standard": 5
+      },
+      "tags": [],
+      "showcase": false
+    },
+    {
+      "id": "salade-cesar_20260828",
+      "title": "Salade César",
+      "description": "Préparé maison avec soin.",
+      "category": "Les salades",
+      "available": true,
+      "featured": false,
+      "image": "",
+      "pricing": {
+        "standard": 5
+      },
+      "tags": [],
+      "showcase": false
+    },
+    {
+      "id": "salade-grecque_20260828",
+      "title": "Salade grecque",
+      "description": "Préparé maison avec soin.",
+      "category": "Les salades",
+      "available": true,
+      "featured": false,
+      "image": "",
+      "pricing": {
+        "standard": 5
+      },
+      "tags": [],
+      "showcase": false
+    },
+    {
+      "id": "sous-marin-pizza_20260828",
+      "title": "Sous-marin pizza",
+      "description": "Préparé maison avec soin.",
+      "category": "Les sous-marins",
+      "available": true,
+      "featured": false,
+      "image": "",
+      "pricing": {
+        "standard": 7
+      },
+      "tags": [],
+      "showcase": false
+    },
+    {
+      "id": "sous-marin-viandes-froides_20260828",
+      "title": "Sous-marin aux viandes froides",
+      "description": "Préparé maison avec soin.",
+      "category": "Les sous-marins",
+      "available": true,
+      "featured": false,
+      "image": "",
+      "pricing": {
+        "standard": 7
+      },
+      "tags": [],
+      "showcase": false
+    },
+    {
+      "id": "sous-marin-poulet-bbq_20260828",
+      "title": "Sous-marin au poulet BBQ",
+      "description": "Préparé maison avec soin.",
+      "category": "Les sous-marins",
+      "available": true,
+      "featured": false,
+      "image": "",
+      "pricing": {
+        "standard": 7
+      },
+      "tags": [],
+      "showcase": false
+    }
+  ]
+}
