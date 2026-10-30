@@ -11,13 +11,13 @@
     "menus_json": "assets/data/menus.json"
   },
   "menu": {
-    "id": "menu-2026-10-23",
+    "id": "menu-2026-10-30",
     "title": "Nouveau menu",
-    "start_date": "2026-10-23",
+    "start_date": "2026-10-30",
     "end_date": ""
   },
   "items": {
-    "nouilles-asiatiques-poulet_20261023": {
+    "lasagne-pepperoni-fromage_20261030": {
       "product_id": "",
       "active": true,
       "prices": {
@@ -40,10 +40,10 @@
           "active": false
         }
       },
-      "title": "Nouilles asiatiques au poulet",
+      "title": "Lasagne pepperoni fromage",
       "category": "Les plats"
     },
-    "couscous-grec_20261023": {
+    "macaroni-fromage-bacon_20261030": {
       "product_id": "",
       "active": true,
       "prices": {
@@ -66,10 +66,10 @@
           "active": false
         }
       },
-      "title": "Couscous grec",
+      "title": "Macaroni fromage bacon",
       "category": "Les plats"
     },
-    "spaghetti-sauce-viande_20261023": {
+    "boulette-tao-riz_20261030": {
       "product_id": "",
       "active": true,
       "prices": {
@@ -92,10 +92,10 @@
           "active": false
         }
       },
-      "title": "Spaghetti sauce à la viande",
+      "title": "Boulette tao avec riz",
       "category": "Les plats"
     },
-    "pate-chinois_20261023": {
+    "pizza-tout-garnie-pain-pita_20261030": {
       "product_id": "",
       "active": true,
       "prices": {
@@ -118,10 +118,10 @@
           "active": false
         }
       },
-      "title": "Pâté chinois",
+      "title": "Pizza tout garnie sur pain pita",
       "category": "Les plats"
     },
-    "riz-chinois-boeuf_20261023": {
+    "poulet-marine-patates-legumes_20261030": {
       "product_id": "",
       "active": true,
       "prices": {
@@ -144,7 +144,7 @@
           "active": false
         }
       },
-      "title": "Riz chinois au bœuf",
+      "title": "Poulet mariné, patates et légumes",
       "category": "Les plats"
     },
     "item_b7a6f709ed924c83834f1289fd883f11": {

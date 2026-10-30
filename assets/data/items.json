@@ -1,8 +1,8 @@
 {
   "items": [
     {
-      "id": "nouilles-asiatiques-poulet_20261023",
-      "title": "Nouilles asiatiques au poulet",
+      "id": "lasagne-pepperoni-fromage_20261030",
+      "title": "Lasagne pepperoni fromage",
       "description": "1 personne (Petit), pour appétits (Grand) ou parfait pour partager (Famille).",
       "category": "Les plats",
       "available": true,
@@ -17,8 +17,8 @@
       "showcase": false
     },
     {
-      "id": "couscous-grec_20261023",
-      "title": "Couscous grec",
+      "id": "macaroni-fromage-bacon_20261030",
+      "title": "Macaroni fromage bacon",
       "description": "1 personne (Petit), pour appétits (Grand) ou parfait pour partager (Famille).",
       "category": "Les plats",
       "available": true,
@@ -33,8 +33,8 @@
       "showcase": false
     },
     {
-      "id": "spaghetti-sauce-viande_20261023",
-      "title": "Spaghetti sauce à la viande",
+      "id": "boulette-tao-riz_20261030",
+      "title": "Boulette tao avec riz",
       "description": "1 personne (Petit), pour appétits (Grand) ou parfait pour partager (Famille).",
       "category": "Les plats",
       "available": true,
@@ -49,8 +49,8 @@
       "showcase": false
     },
     {
-      "id": "pate-chinois_20261023",
-      "title": "Pâté chinois",
+      "id": "pizza-tout-garnie-pain-pita_20261030",
+      "title": "Pizza tout garnie sur pain pita",
       "description": "1 personne (Petit), pour appétits (Grand) ou parfait pour partager (Famille).",
       "category": "Les plats",
       "available": true,
@@ -65,8 +65,8 @@
       "showcase": false
     },
     {
-      "id": "riz-chinois-boeuf_20261023",
-      "title": "Riz chinois au bœuf",
+      "id": "poulet-marine-patates-legumes_20261030",
+      "title": "Poulet mariné, patates et légumes",
       "description": "1 personne (Petit), pour appétits (Grand) ou parfait pour partager (Famille).",
       "category": "Les plats",
       "available": true,
