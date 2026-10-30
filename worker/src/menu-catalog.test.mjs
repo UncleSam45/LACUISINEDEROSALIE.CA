@@ -11,11 +11,11 @@ const [itemsData, menus, settings, delivery, stripe] = await Promise.all([
 ]);
 
 const expected = new Map([
-  ['Nouilles asiatiques au poulet', { petit: 8, grand: 12, familial: 23 }],
-  ['Couscous grec', { petit: 8, grand: 12, familial: 23 }],
-  ['Spaghetti sauce à la viande', { petit: 8, grand: 12, familial: 23 }],
-  ['Pâté chinois', { petit: 8, grand: 12, familial: 23 }],
-  ['Riz chinois au bœuf', { petit: 8, grand: 12, familial: 23 }],
+  ['Lasagne pepperoni fromage', { petit: 8, grand: 12, familial: 23 }],
+  ['Macaroni fromage bacon', { petit: 8, grand: 12, familial: 23 }],
+  ['Boulette tao avec riz', { petit: 8, grand: 12, familial: 23 }],
+  ['Pizza tout garnie sur pain pita', { petit: 8, grand: 12, familial: 23 }],
+  ['Poulet mariné, patates et légumes', { petit: 8, grand: 12, familial: 23 }],
   ['Soupe aux légumes', { standard: 4 }],
   ['Salade du chef', { standard: 5 }],
   ['Salade grecque', { standard: 5 }],
@@ -24,6 +24,9 @@ const expected = new Map([
   ['Sous-marins viande froide', { standard: 7 }],
   ['Sous-marins pizza', { standard: 7 }],
 ]);
+assert.equal(menus.current_menu.id, 'menu-2026-10-30');
+assert.equal(stripe.menu.id, menus.current_menu.id);
+assert.equal(stripe.menu.start_date, menus.current_menu.start_date);
 const activeIds = [...menus.current_menu.item_ids, ...menus.current_menu.extra_ids];
 const activeItems = itemsData.items.filter((item) => activeIds.includes(item.id));
 assert.equal(activeIds.length, expected.size, 'the active menu must not contain stale entries');
@@ -40,6 +43,7 @@ for (const item of activeItems) {
     assert.equal(catalogItem.prices[portion].currency, 'cad');
   }
 }
+assert.deepEqual(Object.keys(stripe.items).sort(), [...activeIds].sort(), 'checkout catalogue must contain only current items');
 assert.equal(settings.ordering.minimum_order, 35);
 assert.equal(delivery.rules.minimum_order, 35);
 assert.equal(settings.ordering.order_notice_hours, 72);

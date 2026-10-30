@@ -1,17 +1,17 @@
 {
   "current_menu": {
-    "id": "menu-2026-10-23",
+    "id": "menu-2026-10-30",
     "active": true,
     "title": "Nouveau menu",
     "description": "Plats maison en formats Petit, Grand et Famille, avec soupes, salades, collations et sous-marins. Commandez au moins 72 heures à l’avance.",
-    "start_date": "2026-10-23",
+    "start_date": "2026-10-30",
     "end_date": "",
     "item_ids": [
-      "nouilles-asiatiques-poulet_20261023",
-      "couscous-grec_20261023",
-      "spaghetti-sauce-viande_20261023",
-      "pate-chinois_20261023",
-      "riz-chinois-boeuf_20261023"
+      "lasagne-pepperoni-fromage_20261030",
+      "macaroni-fromage-bacon_20261030",
+      "boulette-tao-riz_20261030",
+      "pizza-tout-garnie-pain-pita_20261030",
+      "poulet-marine-patates-legumes_20261030"
     ],
     "extra_ids": [
       "item_b7a6f709ed924c83834f1289fd883f11",
@@ -25,6 +25,31 @@
     "promotion_ids": []
   },
   "archive": [
+    {
+      "id": "menu-2026-10-23",
+      "active": false,
+      "title": "Nouveau menu",
+      "description": "Plats maison en formats Petit, Grand et Famille, avec soupes, salades, collations et sous-marins. Commandez au moins 72 heures à l’avance.",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-29",
+      "item_ids": [
+        "nouilles-asiatiques-poulet_20261023",
+        "couscous-grec_20261023",
+        "spaghetti-sauce-viande_20261023",
+        "pate-chinois_20261023",
+        "riz-chinois-boeuf_20261023"
+      ],
+      "extra_ids": [
+        "item_b7a6f709ed924c83834f1289fd883f11",
+        "item_80b3401cebcd4995b1f5930d6ffbc295",
+        "item_7e75b8a217584d5f8e023e25ccb5a6c2",
+        "item_63f0ee3ff25b4527a1b84979068dc20f",
+        "item_37c8871cecd7410c803011694297d1eb",
+        "item_d1083d37c9c94f3195fbaf054d337334",
+        "item_f7f1e87d186c4974ae48550eae09f334"
+      ],
+      "promotion_ids": []
+    },
     {
       "id": "menu-2026-09-18",
       "active": true,
